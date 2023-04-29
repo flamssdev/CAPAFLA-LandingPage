@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+:root {
+
+    // Cores
+
+    --azul-escuro: #00A3FF;
+    --azul-claro: #00C2FF;
+    --branco: #FFFFFF;
+    --cinza: #AAAAAA;
+    --preto: #000000;
+    --preto-claro: #0C0C0C;
+    --cinza-escuro: #151515;
+    --bg-gradiante-cinza: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(35, 35, 35, 0) 100%), #000000;
+    --bg-grandiante-azul: linear-gradient(89.92deg, rgba(21, 21, 21, 0.5) 0.06%, rgba(0, 163, 255, 0.4) 99.94%);
+
+    --redColor: rgba(244, 67, 54, 1);
+    --blueColor: rgba(33, 150, 243, 1);
+
+    // Tamanho da fonte
+
+    --fonte-titulo-grande: 48px;
+    --fonte-titulo-pequeno: 36px;
+    --fonte-subtitulo-grande: 20px;
+    --fonte-subtitulo-pequeno: 14px --fonte-descricao: 16px;
+    --fonte-menu: 16px;
+}
+
+
+body {
+    width: 100%;
+    height: 100vh;
+
+    .flut {
+        position: fixed;
+        z-index: 9999;
+        
+        background-color: var(--branco);
+        width: 55px;
+        border-radius: 30px 0 0 30px;
+        transition: all 0.25s ease-in-out;
+        display: flex;
+        align-items: center;
+        padding: 5px;
+
+        a {
+            height: 50px;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            span {
+            color: var(--preto);
+            font-size: 16px;
+            font-weight: 900;
+            padding: 0 30px;
+            
+            }
+        }
+
+        &:hover {
+            width: 200px;
+        }
+        
+    }
+
+    .insta {
+        bottom: 110px;
+        right: 0px;
+
+        .icon-3d {
+            padding: 8px;
+            color: var(--branco);
+            border-radius: 50%;
+            
+            background: #f09433; 
+            background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+            background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+            background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );    
+        }
+    }
+
+    .whatts {
+        bottom: 20px;
+        right: 0px;
+
+        .icon-3d {
+            padding: 8px;
+            color: var(--branco);
+            background-color: green;
+            border-radius: 50%;
+        }
+    }
+
+    
+    header {
+        z-index: 99;
+    }
+
+    main {
+        z-index: 1;
+        width: 100%;
+
+    }
+}
+
+.subtitulo {
+    font-size: 20px;
+    color: var(--azul-escuro);
+    display: block;
+    font-weight: 400;
+}
+
+.titulo {
+    font-size: 48px;
+    color: var(--branco);
+    display: block;
+    font-weight: 900;
+}
+
+.titulo-menor {
+    font-size: 36px;
+    color: var(--branco);
+    display: block;
+    font-weight: 900;
+}
+
+.separacao {
+    width: 120px;
+    height: 3px;
+    background-color: var(--azul-escuro);
+    display: block;
+}
+
+.paragrafo {
+    font-size: 16px;
+    color: var(--cinza);
+    text-align: justify;
+    font-weight: 400;
+}
+
+.destaque {
+    color: var(--azul-claro);
+}
+
+.texto {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 420px;
+    flex: 1;
+}
+
+h4 {
+    color: var(--branco);
+    font-size: 16;
+    font-weight: 600;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 5px;
+    background-color: var(--preto-claro);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--azul-escuro);
+    height: 5px;
+    border-radius: 20px;
+  }
+  
+  ::-moz-scrollbar {
+    width: 10px;
+    height: 5px;
+    background-color: var(--preto-claro);
+  }
+  
+  ::-moz-scrollbar-thumb {
+    background-color: var(--azul-escuro);
+    height: 5px;
+    border-radius: 20px;
+  }
+  
+  ::-ms-scrollbar {
+    width: 10px;
+    height: 5px;
+    background-color: var(--preto-claro);
+  }
+  
+  ::-ms-scrollbar-thumb {
+    background-color: var(--azul-escuro);
+    height: 5px;
+    border-radius: 20px;
+  }
+
+@media (max-width: 1024px) {
+    body {
+        .flut {
+           &:hover {
+            width: 55px;
+           }
+        }
+    }
+}
+
+
+@media (max-width: 480px) {
+
+
+    .titulo {
+        font-size: 40px;
+    }
+}
+
+
+.no-scroll {
+    overflow: hidden;
+  }
+
+
+  body {
+    header {
+        display: none;
+      }
+    
+      main {
+        display: none;
+      }
+
+      footer {
+        display: none;
+      }
+  }
